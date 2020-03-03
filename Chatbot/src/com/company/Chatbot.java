@@ -13,15 +13,19 @@ public class Chatbot {
 	
 	
 	public Chatbot() {
-		loadData();
 		in = new Scanner(System.in);
 		System.out.println("Hi, what's your name?");
 		custName = in.nextLine();
 		System.out.println("How can I help you " + custName + "?");
+		//loads the responseData array
+		loadData();
 	}
 	public boolean listenAndRespond() {
+		//get user input
 		listen = in.nextLine();
 		listen = listen.toLowerCase();
+		
+		//removes punctuation at the end of a question
 		char lastChar = listen.charAt(listen.length()-1);
 		if(lastChar == '.' || lastChar == '?') {
 			listen = listen.substring(0, listen.length()-1);
@@ -32,7 +36,9 @@ public class Chatbot {
 			System.out.println("Goodbye.");
 			return false;
 		} else {
+			//default response is not knowing
 			response = "I'm sorry, I do not understand. How else may I help you?";
+			//changes the response if it knows the answer
 			getMatch();
 		}
 		System.out.println(response);
@@ -40,6 +46,7 @@ public class Chatbot {
 	}
 	
 	boolean isFarewell() {
+		//checks to see if this should end the conversation
 		for(int i = 0; i < farewellData.length; i++) {
 			if(listen.equals(farewellData[i])) {
 				return true;
@@ -49,6 +56,7 @@ public class Chatbot {
 	}
 	
 	void getMatch() {
+		//checks to see if this question is in the stored data
 		for(int i = 0; i < responseData.length; i++) {
 			if(listen.equals(responseData[i][0])) {
 				response = responseData[i][1];
@@ -57,12 +65,13 @@ public class Chatbot {
 	}
 	
 	void loadData() {
+		//All the question and response data
 		//lowercase for the all the [x][0] values
 		responseData = new String[30][2];
 		responseData[0][0] = "hello";
-		responseData[0][1] = "Hello, how can I help you?";
+		responseData[0][1] = "Hello, how can I help you " + custName + "?";
 		responseData[1][0] = "hey";
-		responseData[1][1] = "Hello, can I help you?";
+		responseData[1][1] = "Hello, can I help you " + custName + "?";
 		responseData[2][0] = "how are you";
 		responseData[2][1] = "I'm doing great. What can I do for you?";
 		responseData[3][0] = "how can i place an order";
