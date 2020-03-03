@@ -36,7 +36,7 @@ public class Chatbot {
 	}
 	
 	boolean isFarewell() {
-		for(int i = 0; i < responseData.length; i++) {
+		for(int i = 0; i < farewellData.length; i++) {
 			if(listen.equals(farewellData[i])) {
 				return true;
 			}
