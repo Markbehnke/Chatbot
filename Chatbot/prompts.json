@@ -1,0 +1,146 @@
+[
+	{
+		"intent": {
+			"prompts": [
+				"hello",
+				"hi",
+				"hey"
+			],
+			"response": "Hello, how can I help you ?"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"how are you",
+				"how do you do",
+				"what's up",
+				"what's good",
+				"what's popping"
+			],
+			"response": "I'm doing great. What can I do for you?"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"how can i place an order",
+				"how may i place an order",
+				"how do i make an order"
+			],
+			"response": "To order, create an account on our website first. You can then fill your basket with items and check out. If you have any special instructions/requests you can enter them there aswell."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"how fast will it take my order to arrive",
+				"how fast will my order take",
+				"how long will my order take",
+				"how long does delivery take",
+				"how many days does it take to deliver"
+			],
+			"response": "That depends. Did you use standard or express shipping?"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"i used standard shipping",
+				"I used standard",
+				"standard",
+				"standard shipping"
+			],
+			"response": "Your order will be delivered to you between 10-14 days from the day you order. If it has been over two weeks, check back with us."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"I used express Shipping ",
+				"I used express",
+				"express",
+				"express shipping"
+			],
+			"response": "Your order will be delivered to you between 2-5 days from the day you order. If it has been over a week, check back with us."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"what can i do if i get the wrong order",
+				"what can i do if i get the wrong delivery",
+				"what do i do if i get the wrong product"
+			],
+			"response": "take a picture of the items you received and send an email to freshfood@info.com with your order number and a representative will contact you about your options."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"what are my options",
+				"Tell me my options",
+				"List my options"
+			],
+			"response": "We can pick up the non-perishable items from the order and issue a full refund.\nWe can issue a partial refund if the issue is spoilt items.\nWe could also offer a discount on your next order if you choose to keep the items."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"i have issues with my order",
+				"There is a problem with my order",
+				"my order has an error"
+			],
+			"response": "I'm sorry to hear that. What is our order number?"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"ordernum4",
+				"4",
+				"0004"
+			],
+			"response": "I have located this order. What are your concerns?"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"my order has not arrived yet and it has been a while",
+				"my order is not here",
+				"my order is taking forever"
+			],
+			"response": "I'm not seeing any issue on our side. To inquire about having the package send again please email us at freshfood@info.com"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"i would like a refund",
+				"give me a refund",
+				"refund"
+			],
+			"response": "I'm sorry to hear that. Please request a refund on the order under the order history tab."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"when will my item be in-stock",
+				"when will you have my item"
+			],
+			"response": "Depending on the item, it can take 1-3 weeks to become available. Please check back frequently."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"i would like to cancel my order",
+				"cancel my order"
+			],
+			"response": "Please go to your Order History and cancel the order."
+		}
+	}
+]
