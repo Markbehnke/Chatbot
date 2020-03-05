@@ -121,6 +121,7 @@
 				"i would like a refund",
 				"give me a refund",
 				"refund"
+				"can i get a refund"
 			],
 			"response": "I'm sorry to hear that. Please request a refund on the order under the order history tab."
 		}
@@ -132,6 +133,16 @@
 				"when will you have my item"
 			],
 			"response": "Depending on the item, it can take 1-3 weeks to become available. Please check back frequently."
+		}
+	},
+	
+	{
+		"intent": {
+			"prompts": [
+				"can i add to my order",
+				"I want to add to my order"
+			],
+			"response": "Unfortunately, you cn not do that. You woud have to place a new order."
 		}
 	},
 	{
