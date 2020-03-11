@@ -24,6 +24,25 @@
 	{
 		"intent": {
 			"prompts": [
+				"Is this customer service",
+				"Is this a person"
+			],
+			"response": "I am a customer bot available to answer any questions especially when ourphone lines are busy."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"how can I speak to a human representative",
+				"I want to talk to a human",
+				"Can I speak to a human"
+			],
+			"response": "To speak to our customer service representatives, you have to place a call to 777-951-0000. You could also send an email to freshfood@info.com. We'd be happy to assist."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
 				"how can i place an order",
 				"how may i place an order",
 				"how do i make an order"
