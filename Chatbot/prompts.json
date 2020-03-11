@@ -145,7 +145,7 @@
 			"response": "Unfortunately, you cn not do that. You woud have to place a new order."
 		}
 	},
-	
+	{
 		"intent": {
 			"prompts": [
 				"I do not like the products I got",
@@ -154,7 +154,7 @@
 			"response": "Sorry to hear that. Can you explain further?"
 		}
 	},
-
+	{
 		"intent": {
 			"prompts": [
 				"I love my products",
@@ -166,6 +166,7 @@
 			"response": "We are happy to hear that. Thank you for choosing us"
 		}
 	},
+	{
 		"intent": {
 			"prompts": [
 				"I love this company",
