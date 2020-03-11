@@ -49,6 +49,15 @@
 			],
 			"response": "To order, create an account on our website first. You can then fill your basket with items and check out. If you have any special instructions/requests you can enter them there aswell."
 		}
+	},{
+		"intent": {
+			"prompts": [
+				"Is there same day delivery?",
+				"Can i receive my order today?",
+				"Can i receive my order on the same day"
+			],
+			"response": "Unfortunately, we do not offer same day delivery at the moment. Our fastest option is currently express shipping."
+		}
 	},
 	{
 		"intent": {
@@ -68,7 +77,8 @@
 				"i used standard shipping",
 				"I used standard",
 				"standard",
-				"standard shipping"
+				"standard shipping",
+				"How fast is standard"
 			],
 			"response": "Your order will be delivered to you between 10-14 days from the day you order. If it has been over two weeks, check back with us."
 		}
@@ -79,7 +89,8 @@
 				"I used express Shipping ",
 				"I used express",
 				"express",
-				"express shipping"
+				"express shipping",
+				"How fast is express"
 			],
 			"response": "Your order will be delivered to you between 2-5 days from the day you order. If it has been over a week, check back with us."
 		}
