@@ -214,5 +214,102 @@
 			],
 			"response": "Please go to your Order History and cancel the order."
 		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"where is the best place to make a purchase",
+				"purchase",
+				"where can i make a purchase from"
+			],
+			"response": "You have the option of making a purchase on our website, calling one of our representatives or visiting one of our branches."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"sales tax",
+				"do you charge sales tax",
+				"is there a sales tax for each purchase"
+			],
+			"response": "Please go to your Order History and cancel the order."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"is there overseas shipping",
+				"do you ship overseas"
+				"Are items shipped overseas"
+			],
+			"response": "We ship both locally and internationally."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"Do you offer discounts",
+				"discounts",
+				"deals"
+				"Are there deals on items"
+			],
+			"response": "Yes we do have seasonal and holiday deals as well as discounts.\nWe currently have a 25% off discount for first time purchasers.\nUse the code NEWBUYER25 at checkout."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"ad match",
+				"price match"
+				"do you offer price match"
+				"do you offer ad match"
+			],
+			"response": "Yes we do. Get in touch with one of our representatives or fill and submit an Ad Match form online."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"how do i contact the customer service team",
+				"what is the customer service phone number",
+				"customer service number"
+			],
+			"response": "Our Customer Service Team are available at the following times: Monday - Friday 09:00 - 17:00 CT.\nYou can contact our Customer Service Team by calling  +1 (800) COM-PANY."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"do you have a mobile app",
+				"phone app",
+				"is there a phone application"
+			],
+			"response": " Yes we do. You can download the app from the either the Microsoft store, the Google play store or the Apple app store. "
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"how do i make an account",
+				"where do i sign up",
+				"sign up",
+				"how do i create an account"
+			],
+			"response": "It's very simple and straighforward.\nJust click on the sign up button. Enter your email address, your prefered username, an ideal password.\nOnce that's done, a confirmation email will be sent to your inbox."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"opt out",
+				"How can i stop recieving promotional emails",
+				"Stop sending me promotional emails",
+				"I would like to opt out of recieving promotional emails",
+				"I would like to unsubscribe from the emails",
+				"unsubscribe"
+			],
+			"response": "We are sorry to see you go from our mailing list. Feel free to click the unsubscribe button on the promotional emails sent to you."
+		}
 	}
+	
 ]
