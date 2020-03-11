@@ -145,6 +145,36 @@
 			"response": "Unfortunately, you cn not do that. You woud have to place a new order."
 		}
 	},
+	
+		"intent": {
+			"prompts": [
+				"I do not like the products I got",
+				"I don't like my items"
+			],
+			"response": "Sorry to hear that. Can you explain further?"
+		}
+	},
+
+		"intent": {
+			"prompts": [
+				"I love my products",
+				"I like my products",
+				"My products are good",
+				"My products are great"
+				
+			],
+			"response": "We are happy to hear that. Thank you for choosing us"
+		}
+	},
+		"intent": {
+			"prompts": [
+				"I love this company",
+				"I love you",
+				"I Love this service"
+			],
+			"response": "We love all our customers too and we look forward to serving you again."
+		}
+	},
 	{
 		"intent": {
 			"prompts": [
