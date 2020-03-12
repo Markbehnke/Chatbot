@@ -6,7 +6,16 @@
 				"hi",
 				"hey"
 			],
-			"response": "Hello, how can I help you ?"
+			"response": "Hello, how can i help you ?"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"thanks",
+				"thank you"
+			],
+			"response": "it's my pleasure. Do you need help with any other thing?"
 		}
 	},
 	{
@@ -18,24 +27,24 @@
 				"what's good",
 				"what's popping"
 			],
-			"response": "I'm doing great. What can I do for you?"
+			"response": "i'm doing great. What can i do for you?"
 		}
 	},
 	{
 		"intent": {
 			"prompts": [
-				"Is this customer service",
-				"Is this a person"
+				"is this customer service",
+				"is this a person"
 			],
-			"response": "I am a customer bot available to answer any questions especially when ourphone lines are busy."
+			"response": "i am a customer bot available to answer any questions especially when our phone lines are busy."
 		}
 	},
 	{
 		"intent": {
 			"prompts": [
-				"how can I speak to a human representative",
-				"I want to talk to a human",
-				"Can I speak to a human"
+				"how can i speak to a human representative",
+				"i want to talk to a human",
+				"can i speak to a human"
 			],
 			"response": "To speak to our customer service representatives, you have to place a call to 777-951-0000. You could also send an email to freshfood@info.com. We'd be happy to assist."
 		}
@@ -47,14 +56,48 @@
 				"how may i place an order",
 				"how do i make an order"
 			],
-			"response": "To order, create an account on our website first. You can then fill your basket with items and check out. If you have any special instructions/requests you can enter them there aswell."
+			"response": "To order, create an account on our website first or just type 'i want to purchase something'. You can then fill your basket with items and check out. if you have any special instructions/requests you can enter them there aswell."
 		}
-	},{
+	},
+	{
 		"intent": {
 			"prompts": [
-				"Is there same day delivery?",
-				"Can i receive my order today?",
-				"Can i receive my order on the same day"
+				"i would like to make an order",
+				"i want to make an order",
+				"i want to purchase something"
+			],
+			"response": "Go ahead, what would you like? Here is a list of some of our popular items:\n  1. eggs\n  2. bread\n  3. coffee\n  4. veggies\n  5. pasta\n  6. fruits\n  7. soda"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"soda",
+				"eggs",
+				"bread",
+				"coffee",
+				"veggies",
+				"pasta",
+				"fruits"
+			],
+			"response": "Great, that item has been added to your cart"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"i am ready to checkout",
+				"checkout"
+			],
+			"response": "Awesome, All items in your cart have been totalled and the payment link has been mailed to you.\nOnce you pay and choose your shipping method, you items will be delivered to you."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"is there same day delivery?",
+				"can i receive my order today?",
+				"can i receive my order on the same day"
 			],
 			"response": "Unfortunately, we do not offer same day delivery at the moment. Our fastest option is currently express shipping."
 		}
@@ -75,24 +118,35 @@
 		"intent": {
 			"prompts": [
 				"i used standard shipping",
-				"I used standard",
+				"i used standard",
 				"standard",
 				"standard shipping",
 				"How fast is standard"
 			],
-			"response": "Your order will be delivered to you between 10-14 days from the day you order. If it has been over two weeks, check back with us."
+			"response": "Your order will be delivered to you between 10-14 days from the day you order. if it has been over two weeks, check back with us."
 		}
 	},
 	{
 		"intent": {
 			"prompts": [
-				"I used express Shipping ",
-				"I used express",
+				"chocolate",
+				"rice",
+				"chips",
+				"bagels"
+			],
+			"response": "We are sorry, that item is out of stock."
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"i used express Shipping ",
+				"i used express",
 				"express",
 				"express shipping",
-				"How fast is express"
+				"how fast is express"
 			],
-			"response": "Your order will be delivered to you between 2-5 days from the day you order. If it has been over a week, check back with us."
+			"response": "Your order will be delivered to you between 2-5 days from the day you order. if it has been over a week, check back with us."
 		}
 	},
 	{
@@ -109,8 +163,8 @@
 		"intent": {
 			"prompts": [
 				"what are my options",
-				"Tell me my options",
-				"List my options"
+				"tell me my options",
+				"list my options"
 			],
 			"response": "We can pick up the non-perishable items from the order and issue a full refund.\nWe can issue a partial refund if the issue is spoilt items.\nWe could also offer a discount on your next order if you choose to keep the items."
 		}
@@ -119,10 +173,10 @@
 		"intent": {
 			"prompts": [
 				"i have issues with my order",
-				"There is a problem with my order",
+				"there is a problem with my order",
 				"my order has an error"
 			],
-			"response": "I'm sorry to hear that. What is our order number?"
+			"response": "i'm sorry to hear that. What is our order number?"
 		}
 	},
 	{
@@ -132,7 +186,18 @@
 				"4",
 				"0004"
 			],
-			"response": "I have located this order. What are your concerns?"
+			"response": "i have located this order. What are your concerns?"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"double the amount of items",
+				"expired items",
+				"spoilt items",
+				"missing items"
+			],
+			"response": "We are sorry to hear about that. send an email to freshfood@info.com with your order number and a representative will contact you about your options."
 		}
 	},
 	{
@@ -142,7 +207,7 @@
 				"my order is not here",
 				"my order is taking forever"
 			],
-			"response": "I'm not seeing any issue on our side. To inquire about having the package send again please email us at freshfood@info.com"
+			"response": "i'm not seeing any issue on our side. To inquire about having the package send again please email us at freshfood@info.com"
 		}
 	},
 	{
@@ -150,10 +215,10 @@
 			"prompts": [
 				"i would like a refund",
 				"give me a refund",
-				"refund"
+				"refund",
 				"can i get a refund"
 			],
-			"response": "I'm sorry to hear that. Please request a refund on the order under the order history tab."
+			"response": "i'm sorry to hear that. Please request a refund on the order under the order history tab."
 		}
 	},
 	{
@@ -170,7 +235,7 @@
 		"intent": {
 			"prompts": [
 				"can i add to my order",
-				"I want to add to my order"
+				"i want to add to my order"
 			],
 			"response": "Unfortunately, you cn not do that. You woud have to place a new order."
 		}
@@ -178,8 +243,8 @@
 	{
 		"intent": {
 			"prompts": [
-				"I do not like the products I got",
-				"I don't like my items"
+				"i do not like the products i got",
+				"i don't like my items"
 			],
 			"response": "Sorry to hear that. Can you explain further?"
 		}
@@ -187,10 +252,10 @@
 	{
 		"intent": {
 			"prompts": [
-				"I love my products",
-				"I like my products",
-				"My products are good",
-				"My products are great"
+				"i love my products",
+				"i like my products",
+				"my products are good",
+				"my products are great"
 				
 			],
 			"response": "We are happy to hear that. Thank you for choosing us"
@@ -199,9 +264,9 @@
 	{
 		"intent": {
 			"prompts": [
-				"I love this company",
-				"I love you",
-				"I Love this service"
+				"i love this company",
+				"i love you",
+				"i Love this service"
 			],
 			"response": "We love all our customers too and we look forward to serving you again."
 		}
@@ -239,7 +304,7 @@
 		"intent": {
 			"prompts": [
 				"is there overseas shipping",
-				"do you ship overseas"
+				"do you ship overseas",
 				"Are items shipped overseas"
 			],
 			"response": "We ship both locally and internationally."
@@ -250,7 +315,7 @@
 			"prompts": [
 				"Do you offer discounts",
 				"discounts",
-				"deals"
+				"deals",
 				"Are there deals on items"
 			],
 			"response": "Yes we do have seasonal and holiday deals as well as discounts.\nWe currently have a 25% off discount for first time purchasers.\nUse the code NEWBUYER25 at checkout."
@@ -260,8 +325,8 @@
 		"intent": {
 			"prompts": [
 				"ad match",
-				"price match"
-				"do you offer price match"
+				"price match",
+				"do you offer price match",
 				"do you offer ad match"
 			],
 			"response": "Yes we do. Get in touch with one of our representatives or fill and submit an Ad Match form online."
@@ -295,21 +360,22 @@
 				"sign up",
 				"how do i create an account"
 			],
-			"response": "It's very simple and straighforward.\nJust click on the sign up button. Enter your email address, your prefered username, an ideal password.\nOnce that's done, a confirmation email will be sent to your inbox."
+			"response": "it's very simple and straighforward.\nJust click on the sign up button. Enter your email address, your prefered username, an ideal password.\nOnce that's done, a confirmation email will be sent to your inbox."
 		}
 	},
 	{
 		"intent": {
 			"prompts": [
 				"opt out",
-				"How can i stop recieving promotional emails",
-				"Stop sending me promotional emails",
-				"I would like to opt out of recieving promotional emails",
-				"I would like to unsubscribe from the emails",
+				"how can i stop recieving promotional emails",
+				"stop sending me promotional emails",
+				"i would like to opt out of recieving promotional emails",
+				"i would like to unsubscribe from the emails",
 				"unsubscribe"
 			],
 			"response": "We are sorry to see you go from our mailing list. Feel free to click the unsubscribe button on the promotional emails sent to you."
 		}
 	}
+	
 	
 ]
