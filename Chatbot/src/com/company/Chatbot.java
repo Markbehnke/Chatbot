@@ -1,4 +1,4 @@
-package com.company;
+
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -15,18 +15,20 @@ public class Chatbot {
 	String response;
 
 	String custName;
-	String[] farewellData = { "bye", "goodbye", "thanks", "thank you" };
+	String[] farewellData = { "bye", "goodbye"};
 
 	public Chatbot() {
 		in = new Scanner(System.in);
-		System.out.println("Hi, what's your name?");
+		System.out.println("CUSTOMER SERVICE: Hi, what's your name?");
+		System.out.print("CUSTOMER: ");
 		custName = in.nextLine();
-		System.out.println("How may I help you " + custName + "?");
+		System.out.println("CUSTOMER SERVICE: How may I help you " + custName + "?");
 
 	}
 
 	public boolean listenAndRespond() throws FileNotFoundException, IOException, ParseException {//catch exceptions because a file is being read from
 		// get user input
+		System.out.print("CUSTOMER: ");
 		listen = in.nextLine();
 		listen = listen.toLowerCase();
 
@@ -56,13 +58,14 @@ public class Chatbot {
 				break;
 			} else if (len == 0) {
 				if (isFarewell()) {
+					
 					//if all the prompts have been parsed and the input is goodbye, return false and and the conversation. 
-					System.out.println("Goodbye.");
+					System.out.println("CUSTOMER SERVICE: Goodbye "+ custName + "! Come back soon!");
 					return false;
 				} else {
 					//if all the prompts have been parsed and the input is not goodbye, tell the user to rephrase their input.
 					//break out of the loop to wait for another user input
-					System.out.println("I'm sorry, I do not understand. Do you mind rephrasing that?");
+					System.out.println("CUSTOMER SERVICE: I'm sorry, I do not understand. Do you mind rephrasing that?");
 					break;
 				}
 			}
@@ -82,7 +85,7 @@ public class Chatbot {
 
 		if (val == true) {
 			response += (String) intent.get("response");
-			System.out.println(response);
+			System.out.println("CUSTOMER SERVICE: "+response);
 		}
 		return val;
 
