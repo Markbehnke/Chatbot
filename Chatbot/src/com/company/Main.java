@@ -9,11 +9,6 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
     	
     	Chatbot bot = new Chatbot();
-    	boolean running = true;
-    	
-    	while(running) {
-    		running = bot.listenAndRespond();
-    	}
     	
     }
 }
