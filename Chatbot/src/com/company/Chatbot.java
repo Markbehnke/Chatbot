@@ -1,5 +1,4 @@
-
-
+package com.company;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Random;
+import info.debatty.java.stringsimilarity.JaroWinkler;
 
 import javax.swing.*;
 
@@ -124,7 +125,13 @@ public class Chatbot implements ActionListener {
 				} else {
 					//if all the prompts have been parsed and the input is not goodbye, tell the user to rephrase their input.
 					//break out of the loop to wait for another user input
-					response = "I'm sorry, I do not understand. Do you mind rephrasing that?";
+					String[] possibleResponse = {"I'm sorry. I'm not sure what you are saying.",
+							"I'm sorry, I do not understand. Do you mind rephrasing that?",
+							"Hmm. I'm do not understand what that means.",
+							"I'm not sure what you mean. Maybe try saying it in another way.",
+							"I do not know what that means yet."};
+					Random rand = new Random();
+					response = possibleResponse[Math.abs(rand.nextInt()) % 5];
 					break;
 				}
 			}
@@ -134,7 +141,7 @@ public class Chatbot implements ActionListener {
 	public static boolean parseResponseData(JSONObject prompt, String q, int len) {
 		//Check response data (JSON file) to see if user input q matches any dialog prompts.
 		//If true, print chatbot response from JSON file. 
-
+		
 		boolean val = false;
 		JSONObject intent = (JSONObject) prompt.get("intent");
 		JSONArray prompts = (JSONArray) intent.get("prompts");
@@ -149,9 +156,11 @@ public class Chatbot implements ActionListener {
 
 	public static boolean checkPrompts(JSONArray promptsArr, String q) {
 		//Check JSON array of prompts to see if user input q matches anyone of them, return true or false
+		JaroWinkler jw = new JaroWinkler();
 		for (Object x : promptsArr) {
 			String p = (String) x;
-			if (p.equals(q)) {
+			double similarity = jw.similarity(p, q);
+			if (similarity > 0.85) {
 				return true;
 			}
 		}
