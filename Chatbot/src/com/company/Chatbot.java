@@ -1,12 +1,15 @@
 
 
-import java.io.FileNotFoundException;
+import java.io.FileNotFoundException;  
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
+import edu.stanford.nlp.pipeline.*;
+
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
 
 public class Chatbot {
 	Object obj;
@@ -16,6 +19,7 @@ public class Chatbot {
 
 	String custName;
 	String[] farewellData = { "bye", "goodbye"};
+	Synonym syn = new Synonym();
 
 	public Chatbot() {
 		in = new Scanner(System.in);
@@ -26,7 +30,7 @@ public class Chatbot {
 
 	}
 
-	public boolean listenAndRespond() throws FileNotFoundException, IOException, ParseException {//catch exceptions because a file is being read from
+	public boolean listenAndRespond() throws FileNotFoundException, IOException, ParseException, org.json.simple.parser.ParseException {//catch exceptions because a file is being read from
 		// get user input
 		System.out.print("CUSTOMER: ");
 		listen = in.nextLine();
@@ -37,6 +41,7 @@ public class Chatbot {
 		if (lastChar == '.' || lastChar == '?') {
 			listen = listen.substring(0, listen.length() - 1).trim();
 		}
+		
 		
 		//Load up JSON file 
 		JSONParser jsonParser = new JSONParser();
@@ -111,5 +116,39 @@ public class Chatbot {
 		}
 		return false;
 	}
+	
+	void POStag(String sentence) {
+		Properties props = new Properties();
+		props.setProperty("annotators", "pos");
+	
+		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
+		CoreDocument doc = new CoreDocument(sentence);
 
+	       Annotation annotation = new Annotation(sentence);
+	       pipeline.annotate(annotation);
+	       
+	       CoreSentence coresen = doc.sentences().get(0);
+	       
+	       List<String> posTags = coresen.posTags();
+
+//		MaxentTagger Tagger = new MaxentTagger("english-left3words-distsim.tagger");
+//		String tagged = Tagger.tagString(sentence);
+	}
+	
+	void Ner(String sentence) {
+		Properties props = new Properties();
+		props.setProperty("annotators", "ner");
+	
+		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
+		CoreDocument doc = new CoreDocument(sentence);
+
+	       Annotation annotation = new Annotation(sentence);
+	       pipeline.annotate(annotation);
+	       
+	       CoreSentence coresen = doc.sentences().get(0);
+	       
+	       List<String> ner = coresen.nerTags();
+		
+	}
+	
 }
