@@ -12,4 +12,21 @@ A major dependency of this project is the json.simple java library. It must be i
 
 Another dependancy is tdebbaty's java-string-similarity used for spell checking. 
 
+Implemented Features:
+-Simple GUI
+
+-Spell Checking:
+  When the user makes errors in their typing the bot is less likely to react in an erratic way
+  CUSTOMER SERVICE: "Hi there! How may I help you?"
+  CUSTOMER: "How od I place an orderr?"
+  CUSTOMER SERVICE: "To order, create an account on our website first or just type 'i want to purchase something'. You can then fill                          your basket with items and check out. if you have any special instructions/requests you can enter them there                            aswell."
+
+
+-Multiple messages when you the bot does not understand the input:
+  Helps make the conversation sound more natural if the bot does not understand the input
+  CUSTOMER: "What did the chicken say?"
+  CUSTOMER SERVICE: "I'm sorry. I'm not sure what you are saying."
+  CUSTOMER: "I'm talking about the chicken"
+  CUSTOMER SERVICE: "I'm sorry, I do not understand. Do you mind rephrasing that?"
+
 
