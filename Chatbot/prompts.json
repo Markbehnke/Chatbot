@@ -375,7 +375,78 @@
 			],
 			"response": "We are sorry to see you go from our mailing list. Feel free to click the unsubscribe button on the promotional emails sent to you."
 		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"hello",
+				"hi",
+				"hey"
+			],
+			"response": "Hello, how can i help you ?"
+		}
+	},
+	{
+		"intent": {
+			"prompts": [
+				"pizza",
+				"can I order pizza?"
+			
+			],
+			"response": "Sure! What size pizza do you want?"
+		}
+	}, 
+{
+		"intent": {
+			"prompts": [
+				"small",
+				"medium",
+				"large",
+				"extra-large",
+				"toppings"
+
+			],
+			"response": "Got it. What toppings do you want?"
+		}
+	},
+{
+		"intent": {
+			"prompts": [
+				"pepperoni",
+				"bacon",
+				"onion",
+				"green-pepper",
+				"cheese",	
+				"ham",
+				"olives",
+				"anchovies",
+				"mushrooms"
+			],
+			"response": "Your topping has been added. To add more toppings, type 'toppings'. \nTo purchase pizza, type 'purchase'."
+		}
+	},
+{
+		"intent": {
+			"prompts": [
+				"purchase",
+				"buy"
+	
+			],
+			"response": "Thank you for the order! Is this pickup or delivery?"
+		}
+	},
+
+{
+		"intent": {
+			"prompts": [
+				"pickup",
+				"delivery",
+				"carryout"
+			],
+			"response": "Thank you! The order will be finished in 15 mins!"
+		}
 	}
+
 	
 	
 ]
