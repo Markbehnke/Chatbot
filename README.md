@@ -1,6 +1,6 @@
-NENMAN GOMWALK
-LUKE SPARG
-MARK BEHNKE
+NENMAN GOMWALK,
+LUKE SPARG,
+MARK BEHNKE,
 ABDELMUIZZ YUSUF
 # Chatbot
 This is a chatbot application developed in java. The main method can be found at master/Chatbot/src/com/company/Main.java
