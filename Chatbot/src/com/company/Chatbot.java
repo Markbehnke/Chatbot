@@ -1,4 +1,4 @@
-
+package com.company;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -100,7 +100,7 @@ public class Chatbot implements ActionListener {
 		
 		//Load up JSON file 
 		JSONParser jsonParser = new JSONParser();
-		FileReader reader = new FileReader("prompts.json");
+		FileReader reader = new FileReader("pizza.json");
 		boolean val = false;
 		Object obj = jsonParser.parse(reader);
 		
