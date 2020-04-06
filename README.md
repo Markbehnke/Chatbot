@@ -29,4 +29,12 @@ Implemented Features:
   CUSTOMER: "I'm talking about the chicken"
   CUSTOMER SERVICE: "I'm sorry, I do not understand. Do you mind rephrasing that?"
 
+-New topic for bot:
+  Added pizza delivery topic ontop of the gocery delivery topic to expand the range of conversations the bot can have.
+  CUSTOMER SERVICE: "Hi there! How may I help you?"
+  CUSTOMER: "pizza"
+  CUSTOMER SERVICE: "Sure! What size pizza do you want?"
+  CUSTOMER: "large"
+  CUSTOMER SERVICE: "Got it. What toppings do you want?"
+
 
